@@ -4,7 +4,7 @@ from langchain_core.documents import Document
 from langchain_core.prompts import PromptTemplate
 
 from app.config import settings
-from app.services.vector_store_simple import vector_store
+from app.services.vector_store_tfidf import vector_store
 from app.models.schemas import SourceReference
 
 

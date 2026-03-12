@@ -1,0 +1,30 @@
+# Cloudflare Tunnel 配置文件
+# 使用前需要：
+# 1. 将 <TUNNEL_ID> 替换为实际的隧道 ID
+# 2. 将 credentials-file 路径中的 <用户名> 替换为实际用户名
+# 3. 将 hostname 中的 yourdomain.com 替换为你的域名
+
+tunnel: knowledge-qa-tunnel
+credentials-file: C:\Users\<用户名>\.cloudflared\<TUNNEL_ID>.json
+
+# 请求配置
+originRequest:
+  connectTimeout: 30s
+  tcpKeepAlive: 30s
+
+# 入口规则
+ingress:
+  # 前端服务 - 主域名
+  - hostname: knowledge-qa.yourdomain.com
+    service: http://localhost:5001
+    originRequest:
+      noTLSVerify: true
+  
+  # 后端 API 服务 - API 子域名 (可选，前端已包含代理)
+  - hostname: api-knowledge-qa.yourdomain.com
+    service: http://localhost:8001
+    originRequest:
+      noTLSVerify: true
+  
+  # 默认规则 - 返回 404
+  - service: http_status:404

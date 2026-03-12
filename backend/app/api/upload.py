@@ -3,7 +3,7 @@ from pathlib import Path
 
 from app.models.schemas import UploadResponse
 from app.services.document_processor import document_processor
-from app.services.vector_store_simple import vector_store
+from app.services.vector_store_tfidf import vector_store
 
 router = APIRouter(prefix="/api", tags=["upload"])
 
