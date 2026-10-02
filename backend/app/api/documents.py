@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException
 
 from app.models.schemas import DocumentsResponse, DocumentInfo, DeleteResponse
-from app.services.vector_store_tfidf import vector_store
+from app.services.vector_store import vector_store
 
 router = APIRouter(prefix="/api", tags=["documents"])
 

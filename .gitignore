@@ -1,1 +1,97 @@
-*.pyc
+# ============================================
+# 敏感信息（绝对不能提交）
+# ============================================
+.env
+backend/.env
+cloudflared-config.yml
+start-with-tunnel.bat
+*.token
+*.key
+*.secret
+
+# ============================================
+# Python
+# ============================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+*.egg
+dist/
+build/
+*.whl
+
+# 虚拟环境
+.venv/
+venv/
+env/
+ENV/
+
+# 测试/覆盖率
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+*.log
+
+# ============================================
+# Node / 前端
+# ============================================
+node_modules/
+frontend/node_modules/
+.npm
+.eslintcache
+.yarn-integrity
+
+# 构建产物
+frontend/dist/
+frontend/build/
+frontend/.vite/
+
+# ============================================
+# 运行时数据（向量索引、上传文档等）
+# ============================================
+backend/data/index/
+backend/data/document_metadata.json
+backend/data/document_vectors.json.migrated
+backend/data/documents/*
+!backend/data/documents/.gitkeep
+
+# ============================================
+# Office 临时文件
+# ============================================
+~$*
+*.tmp
+
+# ============================================
+# IDE / 编辑器
+# ============================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ============================================
+# 操作系统
+# ============================================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ============================================
+# 本地 AI / 工具配置
+# ============================================
+.trae/
+.zcode/
+
+# ============================================
+# 二进制文件
+# ============================================
+tools/*.exe
+tools/*.dll
+tools/*.so
+*.exe
+*.dll
+*.bin

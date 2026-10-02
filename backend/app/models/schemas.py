@@ -14,6 +14,7 @@ class SourceReference(BaseModel):
     source: str
     page: Optional[int] = None
     chunk_index: Optional[int] = None  # 片段序号
+    section: Optional[str] = None  # 所属章节（如 "第二章 休假制度 > 第一节 年假"）
     relevance_score: float
 
 class ChatRequest(BaseModel):

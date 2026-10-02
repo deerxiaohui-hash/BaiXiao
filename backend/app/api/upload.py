@@ -3,7 +3,7 @@ from pathlib import Path
 
 from app.models.schemas import UploadResponse
 from app.services.document_processor import document_processor
-from app.services.vector_store_tfidf import vector_store
+from app.services.vector_store import vector_store
 
 router = APIRouter(prefix="/api", tags=["upload"])
 
@@ -33,7 +33,7 @@ async def upload_document(file: UploadFile = File(...)):
         print(f"[DEBUG] 文档处理完成, ID: {document_id}, 分块数: {len(chunks)}")
         
         print(f"[DEBUG] 开始向量化存储")
-        vector_store.add_documents(chunks, document_id, file.filename, file_size)
+        vector_store.add_documents(chunks, document_id, file.filename, file_size, stored_file=file_path.name)
         print(f"[DEBUG] 向量化存储完成")
         
         return UploadResponse(

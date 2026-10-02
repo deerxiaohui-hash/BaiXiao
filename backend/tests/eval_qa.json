@@ -1,0 +1,21 @@
+{
+  "description": "企业员工管理制度.docx 检索评测集：expect_keywords 命中任一即算召回，section 为期望所属章节",
+  "cases": [
+    {"question": "带薪年假有多少天？", "expect_keywords": ["年休假5天", "年休假10天", "年休假15天"], "expect_section": "第一节 年假"},
+    {"question": "工作满10年年假有几天？", "expect_keywords": ["年休假10天"], "expect_section": "第一节 年假"},
+    {"question": "年假可以留到明年一起休吗？", "expect_keywords": ["不跨年度累计"], "expect_section": "第一节 年假"},
+    {"question": "休年假需要什么手续？", "expect_keywords": ["部门负责人批准"], "expect_section": "第一节 年假"},
+    {"question": "病假期间工资怎么算？", "expect_keywords": ["病假工资"], "expect_section": "第二节 病假"},
+    {"question": "工龄8年以上的员工病假工资比例是多少？", "expect_keywords": ["100%"], "expect_section": "第二节 病假"},
+    {"question": "员工出差要走什么流程？", "expect_keywords": ["出差申请表"], "expect_section": "第一节 出差审批"},
+    {"question": "出差超过5天需要谁批准？", "expect_keywords": ["分管领导"], "expect_section": "第一节 出差审批"},
+    {"question": "去一线城市出差住宿费标准是多少？", "expect_keywords": ["普通员工500元", "一线城市"], "expect_section": "第二节 差旅费用标准"},
+    {"question": "什么级别出差可以坐商务舱？", "expect_keywords": ["商务舱"], "expect_section": "第二节 差旅费用标准"},
+    {"question": "出差每天的吃饭补贴是多少钱？", "expect_keywords": ["午餐：50元", "餐饮补贴"], "expect_section": "第二节 差旅费用标准"},
+    {"question": "出差的市内打车费能报销吗？", "expect_keywords": ["凭票据实报销", "每日上限100元"], "expect_section": "第二节 差旅费用标准"},
+    {"question": "费用报销有没有时间限制？", "expect_keywords": ["30天"], "expect_section": "第四章 报销制度"},
+    {"question": "报销对发票有什么要求？", "expect_keywords": ["发票抬头"], "expect_section": "第四章 报销制度"},
+    {"question": "这个制度由哪个部门负责解释？", "expect_keywords": ["人力资源部"], "expect_section": "第五章 附则"},
+    {"question": "试用期员工适用这套制度吗？", "expect_keywords": ["试用期员工"], "expect_section": "第一章 总则"}
+  ]
+}
